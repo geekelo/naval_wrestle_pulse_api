@@ -103,3 +103,10 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
+  host: db.awwhfzapljijdgrxdqnc.supabase.co
+  port: 5432
+  database: postgres
+  user: postgres
+
+
+
