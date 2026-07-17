@@ -1,0 +1,2 @@
+class GuestRegistration < ApplicationRecord
+end
