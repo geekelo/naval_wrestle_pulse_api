@@ -83,6 +83,3 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: naval_wrestle_pulse_api_production
-  username: naval_wrestle_pulse_api
-  password: <%= ENV["NAVAL_WRESTLE_PULSE_API_DATABASE_PASSWORD"] %>
