@@ -103,10 +103,3 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  # host: aws-0-eu-north-1.pooler.supabase.com
-  # port: 5432
-  # database: naval_wrestle_pulse
-  # user: naval_wrestle_pulse.awwhfzapljijdgrxdqnc
-
-
-
