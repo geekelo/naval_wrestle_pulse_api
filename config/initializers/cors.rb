@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "http://localhost:3000", "https://mbwc.org.ng", "https://naval-wrestle-pulse.vercel.app"
+    origins "http://localhost:3000", "https://mbwc.org.ng", "https://naval-wrestle-pulse.vercel.app", "mbwc.org.ng"
 
     resource "*",
       headers: :any,
