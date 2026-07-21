@@ -6,11 +6,12 @@
 # Read more: https://github.com/cyu/rack-cors
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
-  allow do
-    origins "http://localhost:3000", "https://naval-wrestle-pulse.vercel.app"
-
-    resource "*",
-      headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    allow do
+      origins "http://localhost:3000", "https://mbwc.org.ng", "https://naval-wrestle-pulse.vercel.app", "mbwc.org.ng", "https://www.mbwc.org.ng"
+  
+      resource "*",
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    end
   end
-end
+  
