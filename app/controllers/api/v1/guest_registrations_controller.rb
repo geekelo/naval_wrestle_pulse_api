@@ -1,4 +1,4 @@
-class GuestRegistrationsController < ApplicationController
+class Api::V1::GuestRegistrationsController < ApplicationController
   before_action :set_guest_registration, only: %i[show update destroy]
 
   def index

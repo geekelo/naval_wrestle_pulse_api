@@ -1,4 +1,4 @@
-class TeamRegistrationsController < ApplicationController
+class Api::V1::TeamRegistrationsController < ApplicationController
   before_action :set_team_registration, only: %i[show update destroy]
 
   def index
