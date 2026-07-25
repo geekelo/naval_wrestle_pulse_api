@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+
+development:
+  <<: *default
+  database: naval_wrestle_pulse_api_development
+  username: apple
+  password: 1234
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: naval_wrestle_pulse_api_test
+  username: apple
+  password: 1234
+  host: localhost
+  port: 5432
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+  
