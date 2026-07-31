@@ -1,31 +1,23 @@
 class CreateDhqyscTeamRegistrations < ActiveRecord::Migration[7.2]
   def change
     create_table :dhqysc_team_registrations do |t|
+      t.string :barracks, null: false
+      t.string :sport, null: false
+      t.string :team_gender, null: false
       t.string :team_captain, null: false
-      t.string :organization_unit, null: false
-
-      t.integer :male_count, default: 0, null: false
-      t.integer :female_count, default: 0, null: false
-      t.integer :total_count, default: 0, null: false
-
-      t.string :player_1, null: false
-      t.string :player_2, null: false
-      t.string :player_3, null: false
-      t.string :player_4, null: false
-      t.string :player_5, null: false
-      t.string :player_6, null: false
-      t.string :player_7, null: false
-      t.string :player_8, null: false
-      t.string :player_9, null: false
-      t.string :player_10, null: false
-
-      t.jsonb :female_categories, default: [], null: false
-      t.jsonb :male_categories, default: [], null: false
-
+      t.string :coach, null: false
+      t.jsonb :players, default: [], null: false
       t.string :travel_mode, null: false
       t.boolean :accommodation, null: false
 
       t.timestamps
     end
+
+    add_index :dhqysc_team_registrations, :barracks
+    add_index :dhqysc_team_registrations, :sport
+    add_index :dhqysc_team_registrations, :team_gender
+    add_index :dhqysc_team_registrations, [:barracks, :sport, :team_gender],
+              unique: true,
+              name: "index_dhqysc_team_regs_on_barracks_sport_gender"
   end
 end

@@ -43,25 +43,14 @@ class Api::V1::DhqyscTeamRegistrationsController < ApplicationController
 
   def dhqysc_team_registration_params
     params.require(:dhqysc_team_registration).permit(
+      :barracks,
+      :sport,
+      :team_gender,
       :team_captain,
-      :organization_unit,
-      :male_count,
-      :female_count,
-      :total_count,
-      :player_1,
-      :player_2,
-      :player_3,
-      :player_4,
-      :player_5,
-      :player_6,
-      :player_7,
-      :player_8,
-      :player_9,
-      :player_10,
+      :coach,
       :travel_mode,
       :accommodation,
-      female_categories: [],
-      male_categories: []
+      players: []
     )
   end
 end
