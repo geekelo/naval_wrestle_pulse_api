@@ -1,0 +1,2 @@
+class DhqyscGuestRegistration < ApplicationRecord
+end

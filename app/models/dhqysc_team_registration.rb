@@ -1,0 +1,2 @@
+class DhqyscTeamRegistration < ApplicationRecord
+end
