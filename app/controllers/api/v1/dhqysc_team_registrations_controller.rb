@@ -18,6 +18,10 @@ class Api::V1::DhqyscTeamRegistrationsController < ApplicationController
     else
       render json: { errors: dhqysc_team_registration.errors.full_messages }, status: :unprocessable_entity
     end
+  rescue ActiveRecord::RecordNotUnique
+    render json: {
+      errors: ["Barracks already has a team registered for this sport and gender"]
+    }, status: :unprocessable_entity
   end
 
   def update
