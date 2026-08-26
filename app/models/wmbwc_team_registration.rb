@@ -1,0 +1,2 @@
+class WmbwcTeamRegistration < ApplicationRecord
+end

@@ -11,3 +11,10 @@ User.find_or_create_by!(email: "admin@dhqysc.ng") do |user|
   user.password_confirmation = "password123"
   user.role = "admin"
 end
+
+User.find_or_create_by!(email: "admin@wmbwc.org") do |user|
+  user.name = "Admin"
+  user.password = "password123"
+  user.password_confirmation = "password123"
+  user.role = "admin"
+end

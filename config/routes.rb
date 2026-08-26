@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       resources :guest_registrations
       resources :dhqysc_team_registrations
       resources :dhqysc_guest_registrations
+      resources :wmbwc_team_registrations
+      resources :wmbwc_guest_registrations
       resources :authentication
       resources :registration
     end
